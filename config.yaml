@@ -1,0 +1,24 @@
+# ===========================================
+# 在线考试系统 - 配置文件
+# ===========================================
+
+server:
+  port: "8283"          # 服务端口
+
+database:
+  driver: mysql        # 数据库类型: sqlite / mysql
+  dsn: root:278a735026a56581@tcp(127.0.0.1:3306)/exam?charset=utf8mb4&parseTime=True&loc=Local          # SQLite: 文件路径 exam.db  MySQL: root:278a735026a56581@tcp(127.0.0.1:3306)/exam?charset=utf8mb4&parseTime=True&loc=Local
+
+# Redis 缓存配置
+redis:
+  host: "192.167.1.6"     # Redis 地址
+  port: "6379"          # Redis 端口
+  password: ""          # Redis 密码（无密码留空）
+  db: 12                 # Redis 数据库编号
+
+# 企业微信配置（不配置则企业微信登录不可用）
+wxwork:
+  corp_id: "wwba0cf80281e03d5e"
+  agent_id: "1000073"
+  secret: "SiVBRb0GyD2WTrEj0tijRT7A6rf18VKFrx9T0XHH4-8"
+  redirect_uri: ""
