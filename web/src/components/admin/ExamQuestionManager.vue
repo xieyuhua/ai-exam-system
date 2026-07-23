@@ -108,9 +108,21 @@
           <label
             v-for="opt in form.options" :key="opt.label"
             :class="[form.type === 'multiple' ? 'answer-checkbox' : 'answer-radio', { selected: isAnswerSelected(opt.label) }]"
-            @click="toggleAnswer(opt.label)"
           >
-            <input :type="form.type === 'multiple' ? 'checkbox' : 'radio'" :value="opt.label" />
+            <input
+              v-if="form.type === 'multiple'"
+              type="checkbox"
+              :value="opt.label"
+              :checked="isAnswerSelected(opt.label)"
+              @change="toggleAnswer(opt.label)"
+            />
+            <input
+              v-else
+              type="radio"
+              :value="opt.label"
+              :checked="isAnswerSelected(opt.label)"
+              @change="form.answer = [opt.label]"
+            />
             {{ opt.label }}
           </label>
         </div>

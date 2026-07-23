@@ -5,9 +5,14 @@
 server:
   port: "8283"          # 服务端口
 
+
 database:
-  driver: mysql        # 数据库类型: sqlite / mysql
-  dsn: root:278a735026a56581@tcp(127.0.0.1:3306)/exam?charset=utf8mb4&parseTime=True&loc=Local          # SQLite: 文件路径 exam.db  MySQL: root:278a735026a56581@tcp(127.0.0.1:3306)/exam?charset=utf8mb4&parseTime=True&loc=Local
+  driver: sqlite        # 数据库类型: sqlite / mysql
+  dsn: exam2026.db          # SQLite: 文件路径 exam.db  MySQL: root:278a735026a56581@tcp(127.0.0.1:3306)/exam?charset=utf8mb4&parseTime=True&loc=Local
+
+# database:
+  # driver: mysql        # 数据库类型: sqlite / mysql
+  # dsn: root:278a735026a56581@tcp(127.0.0.1:3306)/exam?charset=utf8mb4&parseTime=True&loc=Local          # SQLite: 文件路径 exam.db  MySQL: root:278a735026a56581@tcp(127.0.0.1:3306)/exam?charset=utf8mb4&parseTime=True&loc=Local
 
 # Redis 缓存配置
 redis:
